@@ -1,6 +1,4 @@
-# Project Title
-
-Custom C++ Stack Data Structure
+# Custom C++ Stack Data Structure
 
 ## Table of Contents
 
