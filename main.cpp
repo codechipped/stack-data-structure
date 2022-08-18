@@ -1,4 +1,4 @@
-#include "Stack.h"
+#include "stack.h"
 #include <iostream>
 #include <string>
 
@@ -9,17 +9,18 @@ template <typename T> void PrintStack(const Stack<T> &stack) {
 
   std::cout << "----------------------\n";
 }
+
 int main(int argc, char const *argv[]) {
   Stack<std::string> stack;
   stack.push("Test 1");
   stack.push("Test 2");
   stack.push("Test 3");
   stack.push("Test 4");
-  if (!stack.Empty()) {
-    std::cout << "Stack has " << std::to_string(stack.Size()) << " elements."
+  if (!stack.empty()) {
+    std::cout << "Stack has " << std::to_string(stack.size()) << " elements."
               << std::endl;
     PrintStack(stack);
   }
-  std::cout << "Popped: " << stack.Pop() << std::endl;
+  std::cout << "Popped: " << stack.pop() << std::endl;
   return 0;
 }

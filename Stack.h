@@ -15,27 +15,24 @@ public:
   }
 
   const T &operator[](size_t index) const {
-    // if (index > m_Size) {
-    //   // assert
-    //   return ;
-    // }
+    /* TODO: Should implement a catch here in case the index exceeds m_Size */
 
     return m_Data[index];
   }
 
-  T Pop() {
+  T pop() {
     m_Size--;
     return m_Data[m_Size];
   }
-  size_t Size() const { return m_Size; }
-  bool Empty() const { return m_Size <= 0; }
+  size_t size() const { return m_Size; }
+  bool empty() const { return m_Size <= 0; }
 
 private:
   void ReAlloc(size_t newCapacity) {
 
     T *newBlock = new T[newCapacity];
-    // if for whatever reason the new allocation size is smaller than our
-    // current size I don't want to go out of range
+
+    // make sure new size isn't lower than current size
     if (newCapacity < m_Size)
       m_Size = newCapacity;
 
