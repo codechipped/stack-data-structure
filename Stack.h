@@ -8,26 +8,34 @@ public:
 
   void push(const T &value) {
     if (m_Size >= m_Capacity)
-      ReAlloc(m_Capacity + m_Capacity / 2);
+      ReAlloc(m_Capacity +
+              m_Capacity / 2); // increase the capacity by half the current size
 
     m_Data[m_Size] = value;
     m_Size++;
   }
 
+  // return the value from specific index T[index]
   const T &operator[](size_t index) const {
     /* TODO: Should implement a catch here in case the index exceeds m_Size */
 
     return m_Data[index];
   }
 
+  // returns last item on the stack
   T pop() {
     m_Size--;
     return m_Data[m_Size];
   }
+
+  // return size of stack
   size_t size() const { return m_Size; }
+
+  // retun if the stack is empty
   bool empty() const { return m_Size <= 0; }
 
 private:
+  // this allows the data struct to be dynamic in size
   void ReAlloc(size_t newCapacity) {
 
     T *newBlock = new T[newCapacity];
