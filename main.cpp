@@ -21,6 +21,13 @@ int main(int argc, char const *argv[]) {
               << std::endl;
     PrintStack(stack);
   }
+
   std::cout << "Popped: " << stack.pop() << std::endl;
+
+  if (!stack.empty()) {
+    std::cout << "Stack has " << std::to_string(stack.size()) << " elements."
+              << std::endl;
+    PrintStack(stack);
+  }
   return 0;
 }
