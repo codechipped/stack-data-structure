@@ -1,9 +1,9 @@
-#include "stack.h"
+#include "Stack.h"
 #include <iostream>
 #include <string>
 
 template <typename T> void PrintStack(const Stack<T> &stack) {
-  for (size_t i = 0; i < stack.Size(); i++) {
+  for (size_t i = 0; i < stack.size(); i++) {
     std::cout << stack[i] << std::endl;
   }
 
