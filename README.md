@@ -9,23 +9,21 @@
 
 ## About <a name = "about"></a>
 
-A simple template for a custom (LILO) stack data structure in C++
+A simple template for a custom (LIFO) stack data structure in C++
 
 ## Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
-
 ```
-You only need the stack.h file, but I included a demonstration of it working.
+Add stack.h to your project and #include it where you want to use it.
 ```
 
 ## Usage <a name = "usage"></a>
 
-After including stack.h in your project you can intialize the custom stack as any other class.
+Include the header into your project. See 'main.cpp' for examples.
 
 - push() adds an item to the stack
 - pop() removes the last item added to the stack
